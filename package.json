@@ -9,6 +9,8 @@
     "deploy": "strapi deploy",
     "dev": "strapi develop",
     "develop": "strapi develop",
+    "lint": "echo 'No lint configured' && exit 0",
+    "test": "echo 'No test suite yet' && exit 0",
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
