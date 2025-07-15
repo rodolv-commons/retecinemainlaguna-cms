@@ -122,4 +122,48 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+
+
+# Content Types – Entity Relationship Diagram
+```mermaid
+erDiagram
+    FILM {
+        string title
+        string original_title
+        richtext synopsis
+        integer year
+        integer duration
+        string languages
+        media image
+    }
+
+    GENRE {
+        string name
+    }
+
+    VENUE {
+        string name
+        string address
+        string city
+        string map_link
+    }
+
+    EVENT {
+        string title
+        richtext description
+        date start_date
+        date end_date
+        string location
+    }
+
+    SCREENING {
+        datetime datetime
+    }
+
+    %% Relationships
+    FILM ||--o{ SCREENING : has
+    VENUE ||--o{ SCREENING : hosts
+    EVENT ||--o{ SCREENING : includes
+    FILM }o--o{ GENRE : has
+
+```

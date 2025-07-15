@@ -1,0 +1,38 @@
+{
+  "collectionName": "films",
+  "info": {
+    "singularName": "film",
+    "pluralName": "films",
+    "displayName": "Film",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "original_title": {
+      "type": "string"
+    },
+    "synopsis": {
+      "type": "richtext"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "languages": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false
+    }
+  }
+}
